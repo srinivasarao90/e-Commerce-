@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Product Management</h1>
+
+    <div class="controls">
+        <input type="text" id="searchInput" placeholder="Search products...">
+        <select id="sortSelect">
+            <option value="">Sort By</option>
+            <option value="name">Name</option>
+            <option value="price">Price</option>
+            <option value="quantity">Quantity</option>
+        </select>
+        <select id="categoryFilter">
+            <option value="">Filter by Category</option>
+            <option value="Fruits">Fruits</option>
+            <option value="Medicals">Medicals</option>
+            <option value="Grocery">Grocery</option>
+            <option value="Vegetables">Vegetables</option>
+        </select>
+    </div>
+
+    <form id="productForm">
+        <input type="text" id="productName" placeholder="Product Name" required>
+        <input type="number" id="productPrice" placeholder="Price" required>
+        <input type="text" id="productDescription" placeholder="Description" required>
+        <input type="text" id="productImage" placeholder="Image URL" required>
+        <input type="number" id="productQuantity" placeholder="Quantity" required>
+        <select id="productCategory" required>
+            <option value="">Select Category</option>
+            <option value="Fruits">Fruits</option>
+            <option value="Medicals">Medicals</option>
+            <option value="Grocery">Grocery</option>
+            <option value="Vegetables">Vegetables</option>
+        </select>
+        <button type="submit" id="submitButton">Add Product</button>
+        <button type="button" id="saveChanges" style="display: none;">Save Changes</button>
+    </form>
+
+    <div id="productContainer">
+        <h2>Fruits</h2>
+        <div id="fruitList" class="product-category"></div>
+        <h2>Medicals</h2>
+        <div id="medicalList" class="product-category"></div>
+        <h2>Grocery</h2>
+        <div id="groceryList" class="product-category"></div>
+        <h2>Vegetables</h2>
+        <div id="vegetableList" class="product-category"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
